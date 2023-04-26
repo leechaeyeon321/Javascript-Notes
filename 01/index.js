@@ -11,8 +11,8 @@ console.log(summary);
 
 let array2 = [3, 5, 1, 2, 4]; //5개의 데이터(N = 5)
 
-for(let i = 0; i< array2.length; i++){
-    for (let j = 0; i<array2.length; j++){
+for (let i = 0; i < array2.length; i++){
+    for (let j = 0; j < array2.length; j++){
         let temp = array2[i] * array2[j];
         console.log(temp);
     }
