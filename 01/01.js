@@ -1,3 +1,12 @@
+let array1 = [3, 5, 1, 2, 4]; //5개의 데이터(N = 5)
+
+for (let i = 0; i < array1.length; i++){
+    for (let j = 0; j < array1.length; j++){
+        let temp = array1[i] * array1[j];
+        console.log(temp);
+    }
+}
+
 let array = [3, 5, 1, 2, 4]; //5개의 데이터(N = 5)
 let summary = 0; //합계를 저장할 변수
 

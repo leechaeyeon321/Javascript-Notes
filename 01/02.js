@@ -76,8 +76,70 @@ for (초기문; 조건문; 증감문){
     //statements
 }
 //1부터 100까지의 합 계산
-let summary = 0;
+let summary1 = 0;
 for (let i = 1; i <= 100; i++){
-    summary +=i;
+    summary1 +=i;
 }
-console.log(summary);
+console.log(summary1);
+
+/* 
+- while문은 조건문이 참일 때 실행되는 반복문입니다.
+- 블록 내부의 코드가 실행되기 전에 참 혹은 거짓을 판단합니다.
+*/
+while(조건문){
+    //실행되는 코드 부분
+}
+
+/* 
+Int -> String
+ */
+let a = "777";
+let b = Number(a);
+console.log(b);
+
+/* String -> Int */
+let c = 777
+let d = String(c);
+console.log(d); /// "777"
+
+/* 
+reduce() 메서드는 배열의 각 요소에 대해 reducer함수를 실행한 뒤에 하나의 결과를 반환한다.
+reducer의 형태: (accumulator, currentValue) => (반환값)
+- 배열의 각 원소를 하나씩 확인하며, 각 원소는 currentValue에 해당합니다.
+- 반환값은 그 이후의 원소에 대하여 accumulator에 저장됩니다.
+*/
+let data = [5, 2, 9, 8, 4];
+
+//minValue 구하기 예제
+let minValue = data.reduce((a, b) => Math.min(a, b));
+console.log(minValue); //2
+
+//원소의 합계 구하기 예제
+let summary = data.reduce((a, b) => a + b);
+console.log(summary); //28
+
+// 직접 값을 설정하여 초기화
+let arr1 = [8, 1, 4, 5, 7];
+
+// 길이가 5이고 모든 원소의 값이 0인 배열 초기화
+let arr2 = new Array(5).fill(0);
+
+// 집합 자료형
+
+let mySet = new Set(); // 집합 객체 생성
+
+// 여러 개의 원소 삽입
+mySet.add(3);
+mySet.add(5);
+mySet.add(7);
+mySet.add(3);
+
+console.log(`원소의 개수: ${mySet.size}`);
+console.log(`원소 7을 포함하고 있는가? ${mySet.has(7)}`);
+
+// 원소 5 제거
+mySet.delete(5);
+
+// 원소를 하나씩 출력
+for (let item of mySet) console.log(item);
+
